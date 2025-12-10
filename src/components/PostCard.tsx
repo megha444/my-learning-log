@@ -1,4 +1,4 @@
-import { Heart, Calendar } from 'lucide-react';
+import { Heart, Calendar, Lightbulb } from 'lucide-react';
 import { Post, topicLabels, topicColors } from '@/data/posts';
 import { cn } from '@/lib/utils';
 
@@ -16,13 +16,13 @@ export function PostCard({ post, index }: PostCardProps) {
 
   return (
     <article
-      className="group gradient-card rounded-xl border border-border/50 p-6 shadow-card hover:shadow-glow hover:border-primary/30 transition-all duration-300 animate-fade-in"
-      style={{ animationDelay: `${index * 100}ms` }}
+      className="group gradient-card rounded-2xl border border-border/60 p-6 shadow-card hover:shadow-glow hover:border-primary/30 transition-all duration-300 animate-fade-in"
+      style={{ animationDelay: `${index * 80}ms` }}
     >
       <div className="flex items-start justify-between gap-4 mb-4">
         <span
           className={cn(
-            'inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border',
+            'inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold border',
             topicColors[post.topic]
           )}
         >
@@ -34,14 +34,21 @@ export function PostCard({ post, index }: PostCardProps) {
         </div>
       </div>
 
-      <p className="text-foreground/90 leading-relaxed font-sans">
-        {post.content}
-      </p>
+      <div className="flex items-start gap-3 mb-4">
+        <div className="p-1.5 rounded-lg bg-accent/10 mt-0.5">
+          <Lightbulb className="w-4 h-4 text-accent" />
+        </div>
+        <p className="text-foreground/90 leading-relaxed flex-1">
+          {post.content}
+        </p>
+      </div>
 
       {post.likes && (
-        <div className="flex items-center gap-2 mt-4 pt-4 border-t border-border/50">
-          <Heart className="w-4 h-4 text-muted-foreground group-hover:text-destructive transition-colors" />
-          <span className="text-sm text-muted-foreground">{post.likes}</span>
+        <div className="flex items-center gap-2 pt-4 border-t border-border/50">
+          <button className="flex items-center gap-2 px-3 py-1.5 rounded-full text-muted-foreground hover:text-primary hover:bg-primary/5 transition-all">
+            <Heart className="w-4 h-4 group-hover:scale-110 transition-transform" />
+            <span className="text-sm font-medium">{post.likes}</span>
+          </button>
         </div>
       )}
     </article>

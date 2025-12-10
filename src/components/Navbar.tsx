@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Home, BookOpen, Cpu, Brain, Code, Layers } from 'lucide-react';
+import { Menu, X, Home, BookOpen, Cpu, Brain, Code, Layers, Sparkles } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const navItems = [
@@ -24,14 +24,15 @@ export function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/60 bg-background/90 backdrop-blur-xl">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <Link 
             to="/" 
-            className="font-mono text-lg font-bold text-primary hover:text-primary/80 transition-colors"
+            className="flex items-center gap-2 text-lg font-bold font-heading text-foreground hover:text-primary transition-colors"
           >
-            &lt;learnings /&gt;
+            <Sparkles className="w-5 h-5 text-primary" />
+            <span>GrowthLog</span>
           </Link>
 
           {/* Desktop Nav */}
@@ -41,10 +42,10 @@ export function Navbar() {
                 key={item.path}
                 to={item.path}
                 className={cn(
-                  'flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200',
+                  'flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-200',
                   isActive(item.path)
-                    ? 'bg-primary/10 text-primary'
-                    : 'text-muted-foreground hover:text-foreground hover:bg-secondary/50'
+                    ? 'bg-primary text-primary-foreground shadow-soft'
+                    : 'text-muted-foreground hover:text-foreground hover:bg-muted'
                 )}
               >
                 <item.icon className="w-4 h-4" />
@@ -56,7 +57,7 @@ export function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-muted-foreground hover:text-foreground"
+            className="md:hidden p-2 text-muted-foreground hover:text-foreground rounded-lg hover:bg-muted transition-colors"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -71,10 +72,10 @@ export function Navbar() {
                 to={item.path}
                 onClick={() => setIsOpen(false)}
                 className={cn(
-                  'flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-all',
+                  'flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all my-1',
                   isActive(item.path)
-                    ? 'bg-primary/10 text-primary'
-                    : 'text-muted-foreground hover:text-foreground hover:bg-secondary/50'
+                    ? 'bg-primary text-primary-foreground'
+                    : 'text-muted-foreground hover:text-foreground hover:bg-muted'
                 )}
                 style={{ animationDelay: `${index * 50}ms` }}
               >
