@@ -1,4 +1,4 @@
-export type Topic = 'system-design' | 'ai' | 'ml' | 'oop' | 'general';
+export type Topic = 'system-design' | 'ai' | 'ml' | 'oop' | 'general' | 'dsa';
 
 export interface Post {
   id: string;
@@ -14,6 +14,7 @@ export const topicLabels: Record<Topic, string> = {
   'ml': 'Machine Learning',
   'oop': 'OOP',
   'general': 'General',
+  'dsa': 'DSA'
 };
 
 export const topicColors: Record<Topic, string> = {
@@ -22,6 +23,7 @@ export const topicColors: Record<Topic, string> = {
   'ml': 'bg-topic-ml/15 text-topic-ml border-topic-ml/25',
   'oop': 'bg-topic-oop/15 text-topic-oop border-topic-oop/25',
   'general': 'bg-topic-general/15 text-topic-general border-topic-general/25',
+  'dsa': 'bg-topic-general/15 text-topic-dsa border-topic-dsa/25'
 };
 
 // Add your posts here! Just copy a post object and modify it.

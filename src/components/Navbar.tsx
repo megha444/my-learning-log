@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Home, BookOpen, Cpu, Brain, Code, Layers, Sparkles } from 'lucide-react';
+import { Menu, X, Home, BookOpen, Cpu, Brain, Code, FileCodeIcon, Layers, Sparkles } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const navItems = [
@@ -10,6 +10,7 @@ const navItems = [
   { path: '/learnings/ai', label: 'AI', icon: Cpu },
   { path: '/learnings/ml', label: 'ML', icon: Brain },
   { path: '/learnings/oop', label: 'OOP', icon: Code },
+  { path: '/learnings/dsa', label: 'DSA', icon: FileCodeIcon }
 ];
 
 export function Navbar() {
@@ -27,12 +28,12 @@ export function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/60 bg-background/90 backdrop-blur-xl">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className="flex items-center gap-2 text-lg font-bold font-heading text-foreground hover:text-primary transition-colors"
           >
             <Sparkles className="w-5 h-5 text-primary" />
-            <span>GrowthLog</span>
+            <span>Megha Agarwal</span>
           </Link>
 
           {/* Desktop Nav */}
