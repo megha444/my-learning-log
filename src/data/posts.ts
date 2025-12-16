@@ -29,15 +29,15 @@ export const topicColors: Record<Topic, string> = {
 // Add your posts here! Just copy a post object and modify it.
 export const posts: Post[] = [
   {
-    id: '1',
-    content: 'Cost Function: It is used to tune your model paramaters w and b to get the best fit. It also uses contour map for visual understanding.',
-    topic: 'ml',
-    date: '2025-12-15',
-  },
-  {
     id: '2',
     content: 'Back-of-the-envelope estimations: Power of two, Latency numbers: Avoid disk seek, compress data before sending over internet, and Availability numbers: more the 9s after decimal point, the lesser downtime.',
     topic: 'system-design',
     date: '2025-12-16',
+  },
+  {
+    id: '1',
+    content: 'Cost Function: It is used to tune your model paramaters w and b to get the best fit. It also uses contour map for visual understanding.',
+    topic: 'ml',
+    date: '2025-12-15',
   },
 ];
