@@ -38,9 +38,10 @@ export function PostCard({ post, index }: PostCardProps) {
         <div className="p-1.5 rounded-lg bg-accent/10 mt-0.5">
           <Lightbulb className="w-4 h-4 text-accent" />
         </div>
-        <p className="text-foreground/90 leading-relaxed flex-1">
-          {post.content}
-        </p>
+        <p className="prose prose-sm max-w-none text-foreground/90"
+          dangerouslySetInnerHTML={{ __html: post.content }} />
+        {/* {post.content}
+        </p> */}
       </div>
 
       {post.likes && (

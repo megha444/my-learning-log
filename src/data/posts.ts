@@ -30,13 +30,13 @@ export const topicColors: Record<Topic, string> = {
 export const posts: Post[] = [
   {
     id: '2',
-    content: 'Back-of-the-envelope estimations: Power of two, Latency numbers: Avoid disk seek, compress data before sending over internet, and Availability numbers: more the 9s after decimal point, the lesser downtime.',
+    content: '<strong>Back-of-the-envelope estimations </strong>: <ul> <li>Power of two</li> <li>Latency numbers: Avoid disk seek, compress data before sending over internet</li><li>Availability numbers: more the 9s after decimal point, the lesser downtime</li></ul>',
     topic: 'system-design',
     date: '2025-12-16',
   },
   {
     id: '1',
-    content: 'Cost Function: It is used to tune your model paramaters w and b to get the best fit. It also uses contour map for visual understanding.',
+    content: '<strong>Cost Function</strong>: It is used to tune your model paramaters <i>w</i> and <i>b</i> to get the best fit. It also uses contour map for visual understanding.',
     topic: 'ml',
     date: '2025-12-15',
   },
