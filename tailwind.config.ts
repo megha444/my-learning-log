@@ -55,7 +55,7 @@ export default {
           "system-design": "hsl(var(--topic-system-design))",
           ai: "hsl(var(--topic-ai))",
           ml: "hsl(var(--topic-ml))",
-          oop: "hsl(var(--topic-oop))",
+          cloud: "hsl(var(--topic-cloud))",
           general: "hsl(var(--topic-general))",
         },
         sidebar: {

@@ -1,4 +1,4 @@
-export type Topic = 'system-design' | 'ai' | 'ml' | 'oop' | 'general' | 'dsa';
+export type Topic = 'system-design' | 'ai' | 'ml' | 'cloud' | 'general' | 'dsa';
 
 export interface Post {
   id: string;
@@ -12,7 +12,7 @@ export const topicLabels: Record<Topic, string> = {
   'system-design': 'System Design',
   'ai': 'AI',
   'ml': 'Machine Learning',
-  'oop': 'OOP',
+  'cloud': 'Cloud',
   'general': 'General',
   'dsa': 'DSA'
 };
@@ -21,13 +21,19 @@ export const topicColors: Record<Topic, string> = {
   'system-design': 'bg-topic-system-design/15 text-topic-system-design border-topic-system-design/25',
   'ai': 'bg-topic-ai/15 text-topic-ai border-topic-ai/25',
   'ml': 'bg-topic-ml/15 text-topic-ml border-topic-ml/25',
-  'oop': 'bg-topic-oop/15 text-topic-oop border-topic-oop/25',
+  'cloud': 'bg-topic-cloud/15 text-topic-cloud border-topic-cloud/25',
   'general': 'bg-topic-general/15 text-topic-general border-topic-general/25',
   'dsa': 'bg-topic-general/15 text-topic-dsa border-topic-dsa/25'
 };
 
 // Add your posts here! Just copy a post object and modify it.
 export const posts: Post[] = [
+  {
+    id: '4',
+    content: '<strong>Cloud Computing basic concepts: </strong>: Virtualization, Virtual Machine, API, Regions, Availability Zones, Scalability, Elastcity, Agility, High Avalbility, Fault Tolerance, Disaster Recovery, Load Balancing. </br><i>Examples</i>: AWS, Azure, Google Cloud',
+    topic: 'cloud',
+    date: '2025-12-18',
+  },
   {
     id: '3',
     content: '<strong>Monotonic Stack </strong>: Maintain a stack that is always increasing or decreasing. When the order breaks, pop until it’s restored.</br><i>Time</i> : <strong>O(n)</strong>: each element pushed once, popped once. </br><i>Space</i> : <strong>O(n)</strong> : Stack holds all elements in the worst case.</br><i>Examples</i>: histogram area, stock span, and next greater element',

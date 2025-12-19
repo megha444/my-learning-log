@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Home, BookOpen, Cpu, Brain, Code, FileCodeIcon, Layers, Sparkles } from 'lucide-react';
+import { Menu, X, Home, BookOpen, Cpu, Brain, Code, Layers, Sparkles, Cloud } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const navItems = [
@@ -9,8 +9,8 @@ const navItems = [
   { path: '/learnings/system-design', label: 'System Design', icon: Layers },
   { path: '/learnings/ai', label: 'AI', icon: Cpu },
   { path: '/learnings/ml', label: 'ML', icon: Brain },
-  { path: '/learnings/oop', label: 'OOP', icon: Code },
-  { path: '/learnings/dsa', label: 'DSA', icon: FileCodeIcon }
+  { path: '/learnings/cloud', label: 'Cloud', icon: Cloud },
+  { path: '/learnings/dsa', label: 'DSA', icon: Code }
 ];
 
 export function Navbar() {

@@ -40,7 +40,7 @@
     --topic-system-design: 200 75% 50%;
     --topic-ai: 280 65% 55%;
     --topic-ml: 330 70% 55%;
-    --topic-oop: 152 60% 42%;
+    --topic-cloud: 152 60% 42%;
     --topic-general: 35 95% 55%;
 
     /* Gradients */
@@ -140,8 +140,8 @@
     --topic-color: var(--topic-ml);
   }
 
-  .topic-oop {
-    --topic-color: var(--topic-oop);
+  .topic-cloud {
+    --topic-color: var(--topic-cloud);
   }
 
   .topic-general {
