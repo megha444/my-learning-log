@@ -29,6 +29,12 @@ export const topicColors: Record<Topic, string> = {
 // Add your posts here! Just copy a post object and modify it.
 export const posts: Post[] = [
   {
+    id: '5',
+    content: '<strong>Wormhole Teleportation</strong> treats matching parentheses as portals: when you hit one, you jump to its pair and reverse direction. This lets you process the string in O(n) time without explicitly reversing substrings.</br><i>Time</i> : <strong>O(n)</strong> : each character processed once. </br><i>Space</i> : <strong>O(n)</strong> : Stack holds all open parentheses in the worst case.</br><i>Examples</i>: reversing substrings within parentheses',
+    topic: 'dsa',
+    date: '2026-01-05',
+  },
+  {
     id: '4',
     content: '<strong>Cloud Computing basic concepts: </strong>: Virtualization, Virtual Machine, API, Regions, Availability Zones, Scalability, Elastcity, Agility, High Avalbility, Fault Tolerance, Disaster Recovery, Load Balancing. </br><i>Examples</i>: AWS, Azure, Google Cloud',
     topic: 'cloud',
