@@ -29,6 +29,18 @@ export const topicColors: Record<Topic, string> = {
 // Add your posts here! Just copy a post object and modify it.
 export const posts: Post[] = [
   {
+    id: '7',
+    content: '<strong>Learning rate (α)</strong> controls how fast a model learns by deciding the step size taken while minimizing the cost function. Too high causes instability, too low makes training slow and inefficient.',
+    topic: 'ml',
+    date: '2026-01-09',
+  },
+  {
+    id: '6',
+    content: '<strong>Gradient descent</strong> is a method used to train models by slowly improving them based on their mistakes. It works by repeatedly adjusting model parameters in small steps to reduce the error.',
+    topic: 'ml',
+    date: '2026-01-06',
+  },
+  {
     id: '5',
     content: '<strong>Wormhole Teleportation</strong> treats matching parentheses as portals: when you hit one, you jump to its pair and reverse direction. This lets you process the string in O(n) time without explicitly reversing substrings.</br><i>Time</i> : <strong>O(n)</strong> : each character processed once. </br><i>Space</i> : <strong>O(n)</strong> : Stack holds all open parentheses in the worst case.</br><i>Examples</i>: reversing substrings within parentheses',
     topic: 'dsa',

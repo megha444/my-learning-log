@@ -26,7 +26,7 @@ I share my daily learnings here to solidify my understanding and help others on 
     {
       role: 'Software Engineer & Business Developement',
       company: 'Atrina Technologies',
-      period: '2024 - Present',
+      period: '2024 - 2025',
       description: 'Building scalable distributed systems and ML pipelines.',
     },
     {
