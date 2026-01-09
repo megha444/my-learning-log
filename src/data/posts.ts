@@ -30,7 +30,7 @@ export const topicColors: Record<Topic, string> = {
 export const posts: Post[] = [
   {
     id: '7',
-    content: '<strong>Learning rate (α)</strong> controls how fast a model learns by deciding the step size taken while minimizing the cost function. Too high causes instability, too low makes training slow and inefficient.',
+    content: '<strong>Learning rate (α)</strong> controls how fast a model learns by deciding the step size taken while minimizing the cost function. Too high causes instability, too low makes training slow and inefficient. And when gradient descent is used on a convex-function like squared error cost function, it only has 1 global minima, so works better.',
     topic: 'ml',
     date: '2026-01-09',
   },
