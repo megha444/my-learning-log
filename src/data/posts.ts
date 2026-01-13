@@ -29,6 +29,13 @@ export const topicColors: Record<Topic, string> = {
 // Add your posts here! Just copy a post object and modify it.
 export const posts: Post[] = [
   {
+    id: '8',
+    content: '<strong>API Gateway</strong>  is a fully managed service that supports rate limiting, SSL termination, authentication, IP whitelisting, servicing static content, etc. When designing a rate-limiter, important question is its deployment: server-side or gateway? Server-side: full control of algorithm, limited by 3rd-party gateway. If already using API gateway, then go with that.',
+    topic: 'system-design',
+    date: '2026-01-13',
+  },
+
+  {
     id: '7',
     content: '<strong>Learning rate (α)</strong> controls how fast a model learns by deciding the step size taken while minimizing the cost function. Too high causes instability, too low makes training slow and inefficient. And when gradient descent is used on a convex-function like squared error cost function, it only has 1 global minima, so works better.',
     topic: 'ml',
