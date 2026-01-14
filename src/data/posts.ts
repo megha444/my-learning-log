@@ -30,7 +30,7 @@ export const topicColors: Record<Topic, string> = {
 export const posts: Post[] = [
   {
     id: '9',
-    content: '<strong>Vectorization</strong> speeds up machine learning computations by replacing loops with matrix and vector operations. It enables parallel processing under the hood, leveraging optimized linear algebra libraries and hardware (CPU/GPU) for faster, scalable execution.',
+    content: '<strong>Vectorization</strong> speeds up machine learning computations by replacing loops with matrix and vector operations. It enables parallel processing under the hood, leveraging optimized linear algebra libraries and hardware (CPU/GPU) for faster, scalable execution. GPUs and modern CPUs implement Single Instruction, Multiple Data (SIMD) pipelines allowing multiple operations to be issued in parallel.',
     topic: 'ml',
     date: '2026-01-14',
   },
