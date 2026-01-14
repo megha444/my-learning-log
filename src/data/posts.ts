@@ -29,6 +29,12 @@ export const topicColors: Record<Topic, string> = {
 // Add your posts here! Just copy a post object and modify it.
 export const posts: Post[] = [
   {
+    id: '9',
+    content: '<strong>Vectorization</strong> speeds up machine learning computations by replacing loops with matrix and vector operations. It enables parallel processing under the hood, leveraging optimized linear algebra libraries and hardware (CPU/GPU) for faster, scalable execution.',
+    topic: 'ml',
+    date: '2026-01-14',
+  },
+  {
     id: '8',
     content: '<strong>API Gateway</strong>  is a fully managed service that supports rate limiting, SSL termination, authentication, IP whitelisting, servicing static content, etc. When designing a rate-limiter, important question is its deployment: server-side or gateway? Server-side: full control of algorithm, limited by 3rd-party gateway. If already using API gateway, then go with that.',
     topic: 'system-design',
