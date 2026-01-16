@@ -29,6 +29,12 @@ export const topicColors: Record<Topic, string> = {
 // Add your posts here! Just copy a post object and modify it.
 export const posts: Post[] = [
   {
+    id: '10',
+    content: '<strong>IAM</strong> is a global AWS service used to securely control who can access what. Key takeaways: avoid using the root account, manage users via groups and least-privilege policies, enforce strong passwords and MFA, and control access consistently across Console, CLI, and SDK using permissions and keys.',
+    topic: 'cloud',
+    date: '2026-01-15',
+  },
+  {
     id: '9',
     content: '<strong>Vectorization</strong> speeds up machine learning computations by replacing loops with matrix and vector operations. It enables parallel processing under the hood, leveraging optimized linear algebra libraries and hardware (CPU/GPU) for faster, scalable execution. GPUs and modern CPUs implement Single Instruction, Multiple Data (SIMD) pipelines allowing multiple operations to be issued in parallel.',
     topic: 'ml',
