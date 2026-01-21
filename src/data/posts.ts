@@ -29,6 +29,12 @@ export const topicColors: Record<Topic, string> = {
 // Add your posts here! Just copy a post object and modify it.
 export const posts: Post[] = [
   {
+    id: '11',
+    content: '<strong>Feature scaling</strong> is essential in machine learning to bring input features to a similar range. It helps algorithms like gradient descent converge faster and prevents features with larger values from dominating the learning process. Common methods include Min-Max Scaling (scales features to [0,1]) and Standardization (scales features to have mean 0 and std dev 1). Always fit the scaler on training data and apply it to test data to avoid data leakage.',
+    topic: 'ml',
+    date: '2026-01-21',
+  },
+  {
     id: '10',
     content: '<strong>IAM</strong> is a global AWS service used to securely control who can access what. Key takeaways: avoid using the root account, manage users via groups and least-privilege policies, enforce strong passwords and MFA, and control access consistently across Console, CLI, and SDK using permissions and keys.',
     topic: 'cloud',
