@@ -1,4 +1,4 @@
-import { Briefcase, Code2, Rocket, Star } from 'lucide-react';
+import { Briefcase, Code, Code2, Rocket, Star, Blocks } from 'lucide-react';
 import { profile } from '@/data/profile';
 
 export function AboutSection() {
@@ -17,7 +17,7 @@ export function AboutSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-1 gap-8 max-w-5xl mx-auto mb-8">
           {/* Skills */}
           <div className="gradient-card rounded-2xl border border-border/60 p-8 shadow-card hover:shadow-glow transition-all duration-300">
             <div className="flex items-center gap-3 mb-6">
@@ -47,7 +47,8 @@ export function AboutSection() {
               ))}
             </div>
           </div>
-
+        </div>
+        <div className="grid md:grid-cols-1 gap-8 max-w-5xl mx-auto mb-8">
           {/* Experience */}
           <div className="gradient-card rounded-2xl border border-border/60 p-8 shadow-card hover:shadow-glow transition-all duration-300">
             <div className="flex items-center gap-3 mb-6">
@@ -67,7 +68,42 @@ export function AboutSection() {
                   <h4 className="font-semibold text-foreground">{exp.role}</h4>
                   <p className="text-primary text-sm font-medium">{exp.company}</p>
                   <p className="text-muted-foreground text-xs mb-2">{exp.period}</p>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{exp.description}</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: exp.description }} />
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-8 p-4 rounded-xl bg-primary/5 border border-primary/20">
+              <div className="flex items-center gap-2 text-primary">
+                <Rocket className="w-4 h-4" />
+                <span className="text-sm font-medium">Always leveling up!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Projects Section */}
+        <div className="grid md:grid-cols-1 gap-8 max-w-5xl mx-auto mb-8">
+          {/* Experience */}
+          <div className="gradient-card rounded-2xl border border-border/60 p-8 shadow-card hover:shadow-glow transition-all duration-300">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-2.5 rounded-xl bg-accent/10 border border-accent/20">
+                <Blocks className="w-5 h-5 text-primary" />
+              </div>
+              <h3 className="text-xl font-heading font-semibold">Projects</h3>
+            </div>
+
+            <div className="space-y-6">
+              {profile.experience.map((exp, index) => (
+                <div
+                  key={index}
+                // className="relative pl-6 border-l-2 border-border hover:border-primary transition-colors"
+                >
+                  {/* <div className="absolute left-[-6px] top-1.5 w-2.5 h-2.5 rounded-full bg-primary border-2 border-background" /> */}
+                  <h4 className="font-semibold text-foreground">{exp.role}</h4>
+                  <p className="text-primary text-sm font-medium">{exp.company}</p>
+                  <p className="text-muted-foreground text-xs mb-2">{exp.period}</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: exp.description }} />
                 </div>
               ))}
             </div>
