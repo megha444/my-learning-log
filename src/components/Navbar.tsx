@@ -1,16 +1,18 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Home, BookOpen, Cpu, Brain, Code, Layers, Sparkles, Cloud } from 'lucide-react';
+import { Menu, X, Home, BookOpen, Cpu, Brain, Code, Layers, Sparkles, Cloud, User } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const navItems = [
-  { path: '/', label: 'Home', icon: Home },
-  { path: '/learnings', label: 'All', icon: BookOpen },
+  // { path: '/', label: 'Home', icon: Home },
+  { path: '/#about', label: 'Skills and Experience', icon: User },
+  { path: '/learnings', label: 'All Learnings', icon: BookOpen },
   { path: '/learnings/system-design', label: 'System Design', icon: Layers },
   { path: '/learnings/ai', label: 'AI', icon: Cpu },
   { path: '/learnings/ml', label: 'ML', icon: Brain },
   { path: '/learnings/cloud', label: 'Cloud', icon: Cloud },
-  { path: '/learnings/dsa', label: 'DSA', icon: Code }
+  { path: '/learnings/dsa', label: 'DSA', icon: Code },
+
 ];
 
 export function Navbar() {
@@ -38,21 +40,40 @@ export function Navbar() {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-1">
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={cn(
-                  'flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-200',
-                  isActive(item.path)
-                    ? 'bg-primary text-primary-foreground shadow-soft'
-                    : 'text-muted-foreground hover:text-foreground hover:bg-muted'
-                )}
-              >
-                <item.icon className="w-4 h-4" />
-                {item.label}
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              if (item.path.startsWith('/#')) {
+                return (
+                  <a
+                    key={item.path}
+                    href={item.path}
+                    className={cn(
+                      'flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-200',
+                      location.hash === item.path.substring(1)
+                        ? 'bg-primary text-primary-foreground shadow-soft'
+                        : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                    )}
+                  >
+                    <item.icon className="w-4 h-4" />
+                    {item.label}
+                  </a>
+                );
+              }
+              return (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className={cn(
+                    'flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-200',
+                    isActive(item.path)
+                      ? 'bg-primary text-primary-foreground shadow-soft'
+                      : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                  )}
+                >
+                  <item.icon className="w-4 h-4" />
+                  {item.label}
+                </Link>
+              );
+            })}
           </div>
 
           {/* Mobile Menu Button */}
@@ -67,23 +88,44 @@ export function Navbar() {
         {/* Mobile Nav */}
         {isOpen && (
           <div className="md:hidden py-4 border-t border-border/50 animate-fade-in">
-            {navItems.map((item, index) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                onClick={() => setIsOpen(false)}
-                className={cn(
-                  'flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all my-1',
-                  isActive(item.path)
-                    ? 'bg-primary text-primary-foreground'
-                    : 'text-muted-foreground hover:text-foreground hover:bg-muted'
-                )}
-                style={{ animationDelay: `${index * 50}ms` }}
-              >
-                <item.icon className="w-5 h-5" />
-                {item.label}
-              </Link>
-            ))}
+            {navItems.map((item, index) => {
+              if (item.path.startsWith('/#')) {
+                return (
+                  <a
+                    key={item.path}
+                    href={item.path}
+                    onClick={() => setIsOpen(false)}
+                    className={cn(
+                      'flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all my-1',
+                      location.hash === item.path.substring(1)
+                        ? 'bg-primary text-primary-foreground'
+                        : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                    )}
+                    style={{ animationDelay: `${index * 50}ms` }}
+                  >
+                    <item.icon className="w-5 h-5" />
+                    {item.label}
+                  </a>
+                );
+              }
+              return (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  onClick={() => setIsOpen(false)}
+                  className={cn(
+                    'flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all my-1',
+                    isActive(item.path)
+                      ? 'bg-primary text-primary-foreground'
+                      : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                  )}
+                  style={{ animationDelay: `${index * 50}ms` }}
+                >
+                  <item.icon className="w-5 h-5" />
+                  {item.label}
+                </Link>
+              );
+            })}
           </div>
         )}
       </div>

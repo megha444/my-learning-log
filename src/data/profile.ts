@@ -42,7 +42,21 @@ I share my daily learnings here to solidify my understanding and help others on 
       role: 'Software Developer',
       company: 'Ericsson Inc.',
       period: '2022 - 2024',
-      description: 'Developed RESTful APIs and microservices architecture.',
+      description: '<ul><li>Built and maintained <strong>Java & Spring Boot microservices</strong> for telecom automation platforms with scalable REST APIs.</li><li>Deployed <strong>SaaS components on Kubernetes</strong> using Helm and Jenkins across multi-cluster environments.</li><li>Improved code quality using <strong>JUnit 5, JaCoCo, and SonarQube, reducing defects by 25%</strong>.</li><li>Developed <strong>ML-based anomaly detection systems using Python, Flask, and TensorFlow</strong> with >85% accuracy.</li><li>Integrated and containerized ML inference workflows using Docker, Kubernetes, and <strong>Jenkins pipelines</strong>.</li><li>Worked with <strong>PostgreSQL, Redis, Elasticsearch, Cassandra, and InfluxDB</strong> for data storage and analytics.</li><li>Explored <strong>distributed tracing with OpenTelemetry</strong> across Kubernetes clusters.</li><li>Built automated data pipelines using Pandas and NumPy for log and metric analysis.</li><li>Automated system testing using <strong>Java and shell scripts</strong>, significantly reducing execution time.</li><li>Monitored and optimized system performance using <strong>TeraVM and Jenkins</strong>.</li></ul></br><p><strong>Key Skills: </strong>Java · Spring Boot · Kubernetes · ML Systems · Cloud-Native Platforms · Python · Pandas · NumPy · Jenkins</p>',
+    },
+  ],
+  projects: [
+    {
+      title: 'Podcast AI App',
+      // company: 'Spotlit Inc.',
+      // period: '2025 - Present',
+      description: '<ul><li>Developed an AI-powered script generation system using <strong>Gemini</strong> to automate content creation for podcast episodes.</li><li>Built a <strong>FastAPI backend</strong> with modular endpoints for dynamic script generation and prompt management.</li><li>Integrated <strong>ElevenLabs and Gemini for near-human audio experience</strong> to create a multi-use podcast assistant.</li><li>Deployed scalable microservices with Docker and Kubernetes, improving development velocity and maintainability.</li></ul>',
+    },
+    {
+      title: 'AI Daily Digest Chrome Extension',
+      // company: 'Atrina Technologies',
+      // period: '2024 - 2025',
+      description: '<ul><li>Solved information overload in AI by delivering <strong>role-specific, context-aware news summaries.</strong></li><li>Personalized tone, depth, and relevance for different professional personas.</li><li><strong>Combined client-side and server-side LLMs</strong> to optimize reliability and performance.</li></ul>',
     },
   ],
 };

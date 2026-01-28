@@ -3,7 +3,7 @@ import { profile } from '@/data/profile';
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-24 bg-muted/30">
+    <section id="about" className="py-24 bg-muted/30 scroll-mt-16">
       <div className="container px-4 mx-auto">
         <div className="text-center mb-16">
           <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary/10 border border-primary/20 mb-6">
@@ -94,15 +94,15 @@ export function AboutSection() {
             </div>
 
             <div className="space-y-6">
-              {profile.experience.map((exp, index) => (
+              {profile.projects.map((exp, index) => (
                 <div
                   key={index}
-                // className="relative pl-6 border-l-2 border-border hover:border-primary transition-colors"
+                  className="relative pl-6 border-l-2 border-border hover:border-primary transition-colors"
                 >
-                  {/* <div className="absolute left-[-6px] top-1.5 w-2.5 h-2.5 rounded-full bg-primary border-2 border-background" /> */}
-                  <h4 className="font-semibold text-foreground">{exp.role}</h4>
-                  <p className="text-primary text-sm font-medium">{exp.company}</p>
-                  <p className="text-muted-foreground text-xs mb-2">{exp.period}</p>
+                  <div className="absolute left-[-6px] top-1.5 w-2.5 h-2.5 rounded-full bg-primary border-2 border-background" />
+                  <h4 className="font-semibold text-foreground">{exp.title}</h4>
+                  {/* <p className="text-primary text-sm font-medium">{exp.company}</p>
+                  <p className="text-muted-foreground text-xs mb-2">{exp.period}</p> */}
                   <p className="text-muted-foreground text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: exp.description }} />
                 </div>
               ))}
