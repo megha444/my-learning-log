@@ -81,7 +81,7 @@ export function ProfileSection() {
                                         <span className="text-sm text-muted-foreground whitespace-nowrap">{job.period}</span>
                                     </div>
                                     <div
-                                        className="text-foreground leading-relaxed prose prose-sm dark:prose-invert"
+                                        className="text-foreground text-sm leading-relaxed [&_ul]:list-disc [&_ul]:pl-5 [&_li]:mb-2 [&_li]:text-foreground [&_strong]:font-bold [&_strong]:text-foreground [&_p]:mb-3"
                                         dangerouslySetInnerHTML={{ __html: job.description }}
                                     />
                                 </div>

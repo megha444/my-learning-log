@@ -68,7 +68,7 @@ export function AboutSection() {
                   <h4 className="font-semibold text-foreground">{exp.role}</h4>
                   <p className="text-primary text-sm font-medium">{exp.company}</p>
                   <p className="text-muted-foreground text-xs mb-2">{exp.period}</p>
-                  <p className="text-muted-foreground text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: exp.description }} />
+                  <p className="text-muted-foreground text-sm leading-relaxed [&_ul]:list-disc [&_ul]:pl-5 [&_li]:mb-2 [&_li]:text-muted-foreground [&_strong]:font-bold [&_strong]:text-foreground [&_p]:mb-3" dangerouslySetInnerHTML={{ __html: exp.description }} />
                 </div>
               ))}
             </div>
@@ -103,7 +103,7 @@ export function AboutSection() {
                   <h4 className="font-semibold text-foreground">{exp.title}</h4>
                   {/* <p className="text-primary text-sm font-medium">{exp.company}</p>
                   <p className="text-muted-foreground text-xs mb-2">{exp.period}</p> */}
-                  <p className="text-muted-foreground text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: exp.description }} />
+                  <p className="text-muted-foreground text-sm leading-relaxed [&_ul]:list-disc [&_ul]:pl-5 [&_li]:mb-2 [&_li]:text-muted-foreground [&_strong]:font-bold [&_strong]:text-foreground [&_p]:mb-3" dangerouslySetInnerHTML={{ __html: exp.description }} />
                 </div>
               ))}
             </div>

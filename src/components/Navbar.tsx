@@ -32,6 +32,7 @@ export function Navbar() {
         <div className="flex h-16 items-center justify-between">
           <Link
             to="/"
+            onClick={() => window.scrollTo(0, 0)}
             className="flex items-center gap-2 text-lg font-bold font-heading text-foreground hover:text-primary transition-colors"
           >
             <Sparkles className="w-5 h-5 text-primary" />
