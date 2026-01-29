@@ -29,6 +29,12 @@ export const topicColors: Record<Topic, string> = {
 // Add your posts here! Just copy a post object and modify it.
 export const posts: Post[] = [
   {
+    id: '13',
+    content: '<strong>Regularization</strong> reduces overfitting by penalizing large model weights and controlling complexity. A high lambda (λ) enforces strong penalties and can cause underfitting, while a low λ weakens regularization and may lead to overfitting on training data.',
+    topic: 'ml',
+    date: '2026-01-29',
+  },
+  {
     id: '12',
     content: '<strong>Stack Mental model:</strong> Push elements when they may help future answers. Pop when they become dominated or can never give a better result later. Monotonic structures help discard useless states early, turning brute force into O(n) thinking.',
     topic: 'dsa',
