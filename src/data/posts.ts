@@ -29,6 +29,12 @@ export const topicColors: Record<Topic, string> = {
 // Add your posts here! Just copy a post object and modify it.
 export const posts: Post[] = [
   {
+    id: '14',
+    content: '<strong>Basic Calculator III</strong>: An operation is not evelauted when you have the right number, left number and operand, because you need to also know what comes next. So an operation can only be evaluated when either its next operator is of equal or lower precedence, you encounter ) or it is the end of the string. <strong>The key is to understand when an operation can be fully executed, not just stack elements</strong>.',
+    topic: 'dsa',
+    date: '2026-01-30',
+  },
+  {
     id: '13',
     content: '<strong>Regularization</strong> reduces overfitting by penalizing large model weights and controlling complexity. A high lambda (λ) enforces strong penalties and can cause underfitting, while a low λ weakens regularization and may lead to overfitting on training data.',
     topic: 'ml',
