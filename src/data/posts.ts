@@ -29,6 +29,12 @@ export const topicColors: Record<Topic, string> = {
 // Add your posts here! Just copy a post object and modify it.
 export const posts: Post[] = [
   {
+    id: '15',
+    content: '<strong>Binary Search</strong>: Correct binary search relies on guaranteed pointer movement (low increases or high decreases). Most problems simplify by searching for the first valid/true condition, using left-most binary search patterns and always validating the final position to handle edge cases.',
+    topic: 'dsa',
+    date: '2026-02-09',
+  },
+  {
     id: '14',
     content: '<strong>Basic Calculator III</strong>: An operation is not evelauted when you have the right number, left number and operand, because you need to also know what comes next. So an operation can only be evaluated when either its next operator is of equal or lower precedence, you encounter ) or it is the end of the string. <strong>The key is to understand when an operation can be fully executed, not just stack elements</strong>.',
     topic: 'dsa',
