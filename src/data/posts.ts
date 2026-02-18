@@ -29,6 +29,12 @@ export const topicColors: Record<Topic, string> = {
 // Add your posts here! Just copy a post object and modify it.
 export const posts: Post[] = [
   {
+    id: '16',
+    content: '<strong>Model selection</strong> requires separating data properly. The training set is used to learn model parameters. Cross-validation repeatedly splits the training data to tune hyperparameters and check stability. The test set is kept untouched and used only once to evaluate final performance, ensuring an unbiased estimate of real-world generalization.',
+    topic: 'ml',
+    date: '2026-02-18',
+  },
+  {
     id: '15',
     content: '<strong>Binary Search</strong>: Correct binary search relies on guaranteed pointer movement (low increases or high decreases). Most problems simplify by searching for the first valid/true condition, using left-most binary search patterns and always validating the final position to handle edge cases.',
     topic: 'dsa',
