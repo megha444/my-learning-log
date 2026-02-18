@@ -29,10 +29,16 @@ export const topicColors: Record<Topic, string> = {
 // Add your posts here! Just copy a post object and modify it.
 export const posts: Post[] = [
   {
-    id: '16',
+    id: '17',
     content: '<strong>Model selection</strong> requires separating data properly. The training set is used to learn model parameters. Cross-validation repeatedly splits the training data to tune hyperparameters and check stability. The test set is kept untouched and used only once to evaluate final performance, ensuring an unbiased estimate of real-world generalization.',
     topic: 'ml',
     date: '2026-02-18',
+  },
+  {
+    id: '16',
+    content: '<strong>Adam optimizer</strong> combines momentum and adaptive learning rates to train models efficiently. It keeps track of past gradients (momentum) and scales updates based on their magnitude, allowing faster convergence and more stable training compared to basic gradient descent.',
+    topic: 'ml',
+    date: '2026-02-13',
   },
   {
     id: '15',
