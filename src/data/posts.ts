@@ -28,6 +28,13 @@ export const topicColors: Record<Topic, string> = {
 
 // Add your posts here! Just copy a post object and modify it.
 export const posts: Post[] = [
+{
+    id: '18',
+    content: '<strong>Variance and standard deviation</strong> measure how spread out data is from the mean. Squaring differences ensures all values stay positive and gives more weight to outliers than points near the mean. Standard deviation takes the square root to bring the measure back to the original scale for easier interpretation.
+  ',
+    topic: 'ml',
+    date: '2026-03-24',
+  },
   {
     id: '17',
     content: '<strong>Model selection</strong> requires separating data properly. The training set is used to learn model parameters. Cross-validation repeatedly splits the training data to tune hyperparameters and check stability. The test set is kept untouched and used only once to evaluate final performance, ensuring an unbiased estimate of real-world generalization.',
