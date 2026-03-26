@@ -30,8 +30,7 @@ export const topicColors: Record<Topic, string> = {
 export const posts: Post[] = [
 {
     id: '18',
-    content: '<strong>Variance and standard deviation</strong> measure how spread out data is from the mean. Squaring differences ensures all values stay positive and gives more weight to outliers than points near the mean. Standard deviation takes the square root to bring the measure back to the original scale for easier interpretation.
-  ',
+    content: '<strong>Variance and standard deviation</strong> measure how spread out data is from the mean. Squaring differences ensures all values stay positive and gives more weight to outliers than points near the mean. Standard deviation takes the square root to bring the measure back to the original scale for easier interpretation.',
     topic: 'ml',
     date: '2026-03-24',
   },
