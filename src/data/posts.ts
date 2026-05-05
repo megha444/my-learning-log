@@ -28,7 +28,13 @@ export const topicColors: Record<Topic, string> = {
 
 // Add your posts here! Just copy a post object and modify it.
 export const posts: Post[] = [
-{
+  {
+    id: '19',
+    content: '<strong>Workflow for ML projects:</strong>Start with EDA before touching any model. Every cleaning decision needs evidence from the data. Change one thing at a time and measure after each change. Feature engineering before model selection. Model selection before tuning. Always cross-validate — never trust a single split. Save the entire pipeline with metadata and a meaningful filename. End every session with a specific evidence-based agenda for the next session. The iteration loop — find a problem, fix it, measure — is the core skill. Everything else is details.',
+    topic: 'ml',
+    date: '2026-05-05',
+  },
+  {
     id: '18',
     content: '<strong>Variance and standard deviation</strong> measure how spread out data is from the mean. Squaring differences ensures all values stay positive and gives more weight to outliers than points near the mean. Standard deviation takes the square root to bring the measure back to the original scale for easier interpretation.',
     topic: 'ml',
